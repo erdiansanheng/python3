@@ -127,6 +127,7 @@ class MyWed():
 			name = name.replace('?', ' ')
 			name = name.replace('<', ' ')
 			name = name.replace('>', ' ')
+			name = name.replace('/', ' ')
 			names.append(name)
 		return names
 
