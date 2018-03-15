@@ -15,8 +15,8 @@ class PIXIV():
 			'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
 			'Referer' : 'https://accounts.pixiv.net/login?lang=zh&source=pc&view_type=page&ref=wwwtop_accounts_index'
 		}
-		self.pixiv_id = '1046036409@qq.com'
-		self.password = 'landi19970325'
+		self.pixiv_id = 'your email'
+		self.password = 'password'
 		self.post_key = []
 		self.return_to = 'http://www.pixiv.net/'
 		self.ip_list = []
