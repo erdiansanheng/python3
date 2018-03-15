@@ -7,7 +7,7 @@ import time
 se = requests.Session()
 
 class PIXIV():
-	def __init__(self, value, path):
+	def __init__(self, value, path, username, password):
 		self.url = 'https://www.pixiv.net/ranking.php?mode=' + str(value)
 		self.base_url = 'https://accounts.pixiv.net/login?lang=zh&source=pc&view_type=page&ref=wwwtop_accounts_index'
 		self.folder_path = path
@@ -15,8 +15,8 @@ class PIXIV():
 			'User-Agent' : 'Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:54.0) Gecko/20100101 Firefox/54.0',
 			'Referer' : 'https://accounts.pixiv.net/login?lang=zh&source=pc&view_type=page&ref=wwwtop_accounts_index'
 		}
-		self.pixiv_id = 'your email'
-		self.password = 'password'
+		self.pixiv_id = username
+		self.password = password
 		self.post_key = []
 		self.return_to = 'http://www.pixiv.net/'
 		self.ip_list = []
@@ -149,7 +149,9 @@ class PIXIV():
 				break
 			time.sleep(2)
 
+username = input('请输入用户名：')
+password = input('请输入密码：')
 value = input('请输入代号：日榜 = daily；周榜 = weekly；月榜 = monthly\n')
 path = input('请输入文件夹路径\n')
-pics = PIXIV(value, path)
+pics = PIXIV(value, path, username, password)
 pics.start()
